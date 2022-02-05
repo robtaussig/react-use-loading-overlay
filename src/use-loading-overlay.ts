@@ -9,7 +9,7 @@ const useLoadingOverlay = (
   const wakeLock = useRef<WakeLockSentinel | null>();
   const loadingOverlay = useRef<HTMLDivElement>(null);
 
-  const setLoading = useCallback(async (loadingText: string) => {
+  const setLoading = useCallback((loadingText: string) => {
     textNode.current?.remove();
     loadingOverlay.current?.remove();
 
@@ -25,7 +25,10 @@ const useLoadingOverlay = (
     if ('wakeLock' in navigator) {
       try {
         wakeLock.current?.release();
-        wakeLock.current = await navigator.wakeLock.request('screen');
+        navigator.wakeLock.request('screen')
+          .then((lock) => {
+            wakeLock.current = lock;
+          });
       } catch (e) {
         wakeLock.current = null;
       }
