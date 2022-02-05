@@ -9,7 +9,7 @@ const useLoadingOverlay = (
   const wakeLock = useRef<WakeLockSentinel | null>();
   const loadingOverlay = useRef<HTMLDivElement>(null);
 
-  const setLoading = useCallback((loadingText: string) => {
+  const setLoading = useCallback((loadingText?: string) => {
     textNode.current?.remove();
     loadingOverlay.current?.remove();
 
