@@ -1,4 +1,4 @@
-import './style.css';
+import './styles.css';
 import { MutableRefObject, useCallback, useEffect, useRef } from 'react';
 import { generateLoadingOverlay, generateTextNode } from './util';
 
