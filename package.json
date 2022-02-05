@@ -1,6 +1,6 @@
 {
   "name": "react-use-loading-overlay",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "A simple, lightweight react hook for displaying a loading overlay",
   "main": "./dist/index.js",
   "files": [
