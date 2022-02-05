@@ -1,0 +1,80 @@
+{
+  "name": "react-use-loading-overlay",
+  "version": "0.1.0",
+  "description": "A simple, lightweight react hook for displaying a loading overlay",
+  "main": "./dist/index.js",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "scripts": {
+    "test": "cross-env node_modules/.bin/jest --verbose",
+    "clear-dist": "cross-env rm -rf dist/",
+    "compile": "cross-env node_modules/.bin/tsc -p .",
+    "push": "cross-env npm run test && npm run clear-dist && npm run compile && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robtaussig/react-use-loading-overlay.git"
+  },
+  "dependencies": {},
+  "types": "./dist/index.d.ts",
+  "peerDependencies": {
+    "react": ">= 16.8.0",
+    "react-dom": ">= 16.8.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.0",
+    "@babel/core": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/react-hooks": "^7.0.2",
+    "@types/jest": "^27.4.0",
+    "@types/node": "^17.0.15",
+    "@types/react": "^17.0.39",
+    "@types/react-dom": "^17.0.11",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^27.5.0",
+    "babel-loader": "^8.2.3",
+    "cross-env": "^7.0.3",
+    "jest": "^27.5.0",
+    "jest-environment-jsdom-sixteen": "^1.0.3",
+    "react": "17.0.2",
+    "source-map-loader": "^3.0.1",
+    "ts-jest": "^27.1.3",
+    "typescript": "^4.5.5"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "clearMocks": true,
+    "coverageDirectory": "coverage",
+    "testMatch": [
+      "<rootDir>/src/lib/**/*.test.(ts|tsx)"
+    ],
+    "setupFiles": [
+      "./__test__/configJSDom.ts"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+  "keywords": [
+    "react",
+    "react-hooks",
+    "loading",
+    "overlay"
+  ],
+  "author": "Robert Taussig <robert.taussig@gmail.com> (robtaussig.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/robtaussig/react-react-use-loading-overlay/issues"
+  },
+  "homepage": "https://github.com/robtaussig/react-react-use-loading-overlay#readme"
+}
